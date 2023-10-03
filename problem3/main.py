@@ -1,5 +1,14 @@
-def fibonacci(number):
-    return 0
+def fibonacci(x):
+    num_list = [0, 1]
+    for i in range (2, x + 1):
+        next_ele = num_list [-1] + num_list[-2]
+        num_list.append(next_ele)
+    
+    if x < 0 or x >= len(num_list):
+        return None
+    
+    return num_list[x]
+
 
 if __name__ == "__main__":
     print(fibonacci(0))  # 0
